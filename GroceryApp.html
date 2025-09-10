@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');  
+     @import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Amita:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }    
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+       .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            font-size: 25px;
+            font-family: "Agu Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+        }
+        .navbar .logo{
+            font-weight: bold;
+            font-size: 32px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+         
+  font-family: "Agu Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+}
+      .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f4f4f4;
+           
+  font-family: "Amita", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-family: "Amita", serif;
+  font-weight: 700;
+  font-style: normal;
+ }
+      .products, .categories, .about, .testimonials, .blog, .contact-container {
+            padding: 40px 40px;
+        }
+        
+        .product-grid, .category-grid, .testimonial-grid, .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+           color: rgb(12, 12, 12); 
+           font-weight: bold;
+           }
+         .container  img:hover{         
+  transform: scale(.9);
+           }
+           .products img:hover {
+            transform: scale(.7);
+            cursor: pointer;
+           }
+        .product-grid1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+           color: black; 
+           font-weight: bold;
+        }
+        .product, .category, .blog-post {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }  
+        #products h2{
+            color: brown;
+            font-family: "Amita", serif;
+            align-items: center;
+  font-weight: 400;
+  font-style: normal;
+font-weight: bold;
+  font-family: "Amita", serif;
+  font-weight: 700;
+  font-style: normal;
+        }
+      .testimonial-grid    img{
+            width: 300px;
+            border-radius: 50%;
+        }
+        #about img{
+            width: 100%; 
+  max-width: 400px; 
+  height: auto; 
+  border-radius: 8px;
+        }
+  .container {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between; 
+  padding: 20px;
+}
+.text-content {
+  flex: 1; 
+  padding-right: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+  }
+        button {
+            margin: 5px;
+            padding: 5px 10px ;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #eec18d;
+            color: rgb(10, 10, 10);
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+  button:hover {
+            background-color: #08b91f;
+            
+  transform: scale(.7);
+
+        }
+        #contact {
+  padding: 5rem 0;
+  background: rgb(226, 226, 226);
+}
+.contact-container {
+  display: flex;
+  background: #fff;
+}
+.contact-img {
+  width: 50%;
+}
+.contact-img img {
+  display: block;
+  height: 400px;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.form-container {
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+}
+.form-container input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 1rem 0;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+.form-container textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  color: #444;
+  outline: none;
+  padding: 1rem 0;
+  resize: none;
+}
+.form-container h2 {
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 1rem;
+  margin-top: -1.2rem;
+}
+.form-container a {
+  font-size: 1.3rem;
+}
+#footer h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 2.6rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgb(65, 65, 65);
+}       
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+        .dropDown{
+   display:none;
+    justify-content: space-between;
+    position: absolute;
+    top: 70px;
+    left: 700px;
+    gap: 10px;
+    padding: 20px;   
+}
+.dropDown ul {
+    background-color: rgb(202, 202, 165);
+   display: flex;
+    flex-direction: column;
+    box-shadow:rgb(15, 15, 15) ;
+    border-radius: 10px;
+    color: #0f0d0d;
+    list-style-type: none;
+}
+.dropDown ul li a{
+    color: #0f0d0d;    
+} 
+      h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        .emoji h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 120px;
+            font-size: 100px;
+        }
+        h2:hover {
+            transform: scale(105%);
+        }
+        .btns button {
+            position: relative;
+            left: 520px;
+            width: 30px;
+            padding: 5px;
+            background-color: white;
+        }
+        
+        button:hover {
+            background-color: darkolivegreen;
+            cursor: pointer;
+           
+        }
+        .btns #submitButton {
+            background-color: black;
+            color: aliceblue;
+            width: 60px;   
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+            }
+        }
+        </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+            <div class="logo"> GroceryStore</div>
+        <nav>
+            <ul class="nav-links">
+                <li class="show-drop"><a href="./home1.html">Home</a> <i class="fa-solid fa-caret-down"></i></a></li>
+                <li class="show-drop"></li><li><a href="./products.html">Products</a> <i class="fa-solid fa-caret-down"></i></a></li>
+               <li><a href="#categories">Categories</a> <i class="fa-solid fa-caret-down"></i></a></li>
+                <li class="show-drop"></li><li class="show-drop"><a href="#" id="dropDown">About Us <i class="fa-solid fa-caret-down"></i></a></li>
+                <li class="dropDown">
+                    <ul>
+                        <li><a href="../foodmenu.html">FOOD</a></li>
+                        <li><a href="../category.html">CATEROGIES</a></li>
+                        <li><a href="../Testimonal.html">SERVICES</a></li>
+                        <li><a href="../blog.html">MAIN THEME</a></li>
+                        <li><a href="../webdesign.html">LIST ITEMS</a></li>
+                    </ul> 
+                </li> 
+                <li class="show-drop"></li><li class="show-drop"><a href="../blog1.html" id="dropDown">Blog <i class="fa-solid fa-caret-down"></i></a></li>
+
+               <li><a href="#contact">Contact</a> 
+        </nav>
+        <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> My Cart</button>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Fresh Groceries Delivered to Your Doorstep</h1>
+        <p>Shop fresh fruits, vegetables, and more!</p>
+        <button class="btn-shop">Shop Now</button>
+    </section>
+    <!-- Featured Products -->
+    <section id="products" class="products">
+        <h2> Fruits Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1365099869/photo/six-apples.jpg?b=1&s=612x612&w=0&k=20&c=1MF_0tKtjHFbqTUQMqu3hRTQeB7qplhLkLJru3pMz48=" 
+                height="150px"  width="150px" alt="Apple">
+                <p>Fresh Apples</p>
+                <span>$3.00/lb</span>  <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+            <img src="https://img.freepik.com/free-photo/bananas_1339-1183.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Banana">
+                <p>Bananas</p>
+                <span>$1.20/lb</span> <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1345260511/photo/mango-fruit-with-mango-cubes-and-leaves-isolated-on-a-white-background-organic-food.jpg?b=1&s=612x612&w=0&k=20&c=zJq2vBHM93vGgcwyHRD9HOLWFFzv2RgyfH8OeTvqXxs=" width="150px"  height="150px" alt="Carrot">
+                <p>Mangoes</p>
+                <span>$250/lb</span> <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/orange-juicy-ripe-circle-citrus_1172-203.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px"  height="150px"alt="Carrot">
+                <p>Oranges</p>
+                <span>$56.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1412854156/photo/strawberries-isolated-strawberry-whole-and-a-half-on-white-background-strawberry-slice-with.jpg?b=1&s=612x612&w=0&k=20&c=zTWv_RCMlSfr4ATR45uYGFCRMCp8AoBiBCEO_P6XK1Q=" width="150px" height="150px" alt="Carrot">
+                <p>strawberries</p>
+                <span>$35.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1217479737/photo/pineapple-with-slices-isolated-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=YurK7AyvZP3WcBjrhXXQ_WhtzVmnyhn__hjJNvHYEPM=" width="150px" height="150px" alt="Carrot">
+                <p>Pineapples</p>
+                <span>$67.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/delicious-bunch-grapes_1203-1891.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Grapes</p>
+                <span>$25.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/fresh-watermelon-isolated-white-background_454083-30.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>watermelons</p>
+                <span>$27.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/kiwi-fruits-isolated-white_127657-685.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px"  height="150px" alt="Carrot">
+                <p>kiwi's</p>
+                <span>$89.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/blueberries-with-leaves-isolated_183352-2565.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid"  width="150px" height="150px"alt="Carrot">
+                <p>blueberries</p>
+                <span>$5.00/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/nectarines_489827-2087.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Peach's</p>
+                <span>$2.50/lb</span><br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/468348156/photo/sweet-cherry.jpg?b=1&s=612x612&w=0&k=20&c=DjL8PpjjXRSh23sF7Um-05qgtHgHjh_i66VeCGsa1pQ="  width="150px" height="150px" alt="Carrot">
+                <p>cherries</p>
+                <span>$2.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/exotic-delicious-pomegranate-white-background_144627-12577.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px"  height="150px"alt="Carrot">
+                <p>pomegranate's</p>
+                <span>$90.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div> 
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1204875411/photo/set-of-fresh-whole-and-half-papaya-fruit-and-slices.jpg?b=1&s=612x612&w=0&k=20&c=96vr4yRAkpHMhvYLZUe1qFHCnam892A3_mmU862YKc0=" width="150px" height="150px"alt="Carrot">
+                <p>Papaya's</p>
+                <span>$58.9/lb</span><br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/171575811/photo/guava.jpg?b=1&s=612x612&w=0&k=20&c=P-h7pFD35YP0rR3BvT7JWv9x3zrXRlxZeGRqTgwidQg=" width="150px" height="150px"alt="Carrot">
+                <p>Guava</p>
+                <span>$30.8/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/green-avocados_144627-43538.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid"  width="150px" height="150px" alt="Carrot">
+                <p>Avocados</p>
+                <span>$20.9/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/lychee-fruit-with-leaves-isolated-white-surface_147493-591.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px"  height="150px" alt="Carrot">
+                <p>Lychee's</p>
+                <span>$59.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1364034447/photo/fresh-pitahaya-on-white-background-dragon-fruit.jpg?b=1&s=612x612&w=0&k=20&c=iJpDij3QiQxSAdk_Qe886ZPI699msje6CRKLLSYw1v4=" width="150px" height="150px" alt="Carrot">
+                <p>Dragen Fruit's</p>
+                <span>$50.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1290985938/photo/ripe-jackfruit-isolated-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=Ka1CUdcZd0C3UB15It2BXtuHurbGwP_uOir5N9NPcLw="  width="150px"  height="150px" alt="Carrot">
+                <p>Jack Fruit's</p>
+                <span>$45.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/fresh-ripe-figs-heap-dried-ones-isolated-white-background-close-up_857988-4017.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px"  height="150px" alt="Carrot">
+                <p>Fig's</p>
+                <span>$25.0/lb</span><br>
+                <button id="decreaseButton">-</button>
+                <span id="cartCounter">Add</span>
+                <button id="increaseButton">+</button>
+                <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/sweet-apricots-with-leaf-isolated-white-background_183352-596.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px"  alt="Carrot">
+                <p>Apricot's</p>
+                <span>$1.50/lb</span><br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            
+        </div>
+    </section>
+   
+    <section id="products" class="products">
+        <h2>Dairy Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://img.freepik.com/free-vector/realistic-milk-boxes-isolated_1284-35984.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" 
+                height="150px"  width="150px" alt="Apple">
+                <p>Fresh milk</p>
+                <span>$5.00/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+            <img src="https://img.freepik.com/free-psd/delicious-cheese-horizontal-banner-template_23-2148920834.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Banana">
+                <p>Cheese</p>
+                <span>$1.20/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-vector/realistic-yellow-stick-butter-cutting-board-with-metal-knife_1441-2016.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px"  height="150px" alt="Carrot">
+                <p>Butter</p>
+                <span>$8.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-vector/realistic-set-two-ceramic-bowls-with-white-sour-cream-yogurt-sauce-tartar-soft-cheese_1441-1850.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px"  height="150px"alt="Carrot">
+                <p>sour cream</p>
+                <span>$3.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1405931043/photo/scoop-the-vanilla-ice-cream-with-an-ice-cream-scoop.jpg?b=1&s=612x612&w=0&k=20&c=_5K40cKtE-wSytTOYByUqislOkR-Sc4jUtoNgKDf21Y=" width="150px" height="150px" alt="Carrot">
+                <p>ice-cream</p>
+                <span>$4.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/cheese_144627-22908.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Cattage cheese</p>
+                <span>$2.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/blue-cheese_23-2148145262.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Bluecheese</p>
+                <span>$3.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/parmesan-cheese-white_105428-1175.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Parmesan</p>
+                <span>$6.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1341216531/photo/italian-buffalo-mozzarella-isolated-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=RhPg1WO2UUadbL-FDJTn9br32ah3fpI1rvZCbBfnaqI=" width="150px"  height="150px" alt="Carrot">
+                <p>Mozzarella</p>
+                <span>$5.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/512750786/photo/fresh-milk-on-the-table.jpg?b=1&s=612x612&w=0&k=20&c=hDz_fxXUjJpxagCZUUDg-be8OdMVIXIfT5tcA6SILik="  width="150px" height="150px"alt="Carrot">
+                <p>Skim milk</p>
+                <span>$7.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1226878991/photo/yogurt-kefir-ayran-lassi-stock-photo.jpg?b=1&s=612x612&w=0&k=20&c=uXjSvnJaG0b7CTgSKDvjZEi19zXSAe1XZ2VGxqhaZcg= " width="150px" height="150px" alt="Carrot">
+                <p>Butter milk</p>
+                <span>$5.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1317528423/photo/kefir-grains-in-wooden-spoon-with-glass-of-kefir-drink-healthy-fermented-probiotic-cold-dairy.jpg?b=1&s=612x612&w=0&k=20&c=HzWWNUHLQbJWqWD4buBC5SuVLe00FlRo3oRwuwbMHaI="  width="150px" height="150px" alt="Carrot">
+                <p>Kefir</p>
+                <span>$6.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1183707972/photo/paneer-cottage-cheese-close-up.jpg?b=1&s=612x612&w=0&k=20&c=nJhDi30iE4y7s9DhjI6g4VxGxbMQZ6f9uStkAcumnhM=" width="150px"  height="150px"alt="Carrot">
+                <p>Panner</p>
+                <span>$150.0/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div> 
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/wooden-board-with-glass-cups-milk_114579-44017.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px"alt="Carrot">
+                <p>Evaporated milk</p>
+                <span>$1.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+           
+    </section>
+    <section id="products" class="products">
+        <h2>vegetables Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/close-up-view-basket-onions-sackloth-white-background_141793-5347.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid"  width="150px" height="150px"  alt="Apple">
+                <p>Onion's</p>
+                <span>$6.00/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+
+            </div>
+            <div class="product">
+            <img src="https://img.freepik.com/free-photo/fresh-red-tomatos_144627-33943.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Banana">
+                <p>Tomatos</p>
+                <span>$1.20/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+
+            </div>
+            <div class="product">
+                <img src=" https://image.shutterstock.com/image-photo/two-young-fresh-potatoes-isolated-260nw-2489273441.jpg" width="150px"  height="150px" alt="Carrot">
+                <p>potatoes</p>
+                <span>$2.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/orange-sweet-potato-yam-ipomoea-260nw-2505191349.jpg" width="150px"  height="150px"alt="Carrot">
+                <p>sweet potatoes</p>
+                <span>$4.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/pile-lots-broccoli-background-concept-260nw-2477863233.jpg" width="150px" height="150px" alt="Carrot">
+                <p>Broccoli</p>
+                <span>$5.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/spinach-table_144627-20710.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Spinach</p>
+                <span>$7.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/raw-nature-background-health-white_1203-5950.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Kale</p>
+                <span>$1.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/lettuce-leaves-breakfast-lunch-salad-260nw-2518782599.jpg" width="150px" height="150px" alt="Carrot">
+                <p>Lettuce</p>
+                <span>$3.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/three-european-cucumbers-burpless-seedless-260nw-1018065463.jpg" width="150px"  height="150px" alt="Carrot">
+                <p>Cucumber</p>
+                <span>$6.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-vector/set-three-realistic-bell-peppers-bulgarian-red-green-yellow_1441-1791.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid"  width="150px" height="150px"alt="Carrot">
+                <p>Bell pepper</p>
+                <span>$6.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-vector/cauliflower-watercolor-painting-style-illustration_676613-106.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Cauli flower</p>
+                <span>$3.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-vector/realistic-set-with-half-head-garlic-peeled-cloves-chopped-slices_1441-2116.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid"  width="150px" height="150px" alt="Carrot">
+                <p>Gralic</p>
+                <span>$9.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/fresh-ginger-root-sliced-isolated-260nw-2483150731.jpg" width="150px"  height="150px"alt="Carrot">
+                <p>Ginger</p>
+                <span>$8.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div> 
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/heap-fresh-whole-champignons-button-260nw-2458910187.jpg" width="150px" height="150px"alt="Carrot">
+                <p>Mushrooms</p>
+                <span>$2.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>  
+    </section>
+     <section id="products" class="products">
+        <h2>Staples Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://img.freepik.com/free-psd/close-up-rice-isolated_23-2151656299.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid"  width="150px" height="150px"  alt="Apple">
+                <p>Rice</p>
+                <span>$300.0/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+            <img src="https://img.freepik.com/free-photo/wooden-bowl-with-flour-oat-grains-marble-surface_114579-45821.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Banana">
+                <p>wheat  flour</p>
+                <span>$120.6/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/chilli-powder-white-bowl-isolated-260nw-2414027701.jpg" width="150px"  height="150px" alt="Carrot">
+                <p>chilli powder</p>
+                <span>$4.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/turmeric-powder-white-cup-white-space_55883-1566.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px"  height="150px"alt="Carrot">
+                <p>Tumeric powder</p>
+                <span>$4.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/set-spice-spicy-mixture-spices-260nw-2235350359.jpg" width="150px" height="150px" alt="Carrot">
+                <p>Masal's</p>
+                <span>$3.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://image.shutterstock.com/image-photo/instant-noodle-isolated-on-white-260nw-2493930185.jpg" width="150px" height="150px" alt="Carrot">
+                <p>Noodles</p>
+                <span>$2.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/rolled-oats-healthy-breakfast-cereal-oat-flakes-bowl-isolated-white-background_123827-35208.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" width="150px" height="150px" alt="Carrot">
+                <p>Oats</p>
+                <span>$5.50/lb</span>
+                <br>
+                <button id="decreaseButton">-</button>
+    <span id="cartCounter">Add</span>
+    <button id="increaseButton">+</button>
+    <p>Items in Cart: <span id="cartCount">0</span></p>
+            </div>
+        </div> 
+            
+      
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="text-content">
+        <h2>About Us</h2>
+        <p>We provide fresh and organic groceries directly from farms to your home. Our mission is to deliver quality products with unbeatable convenience.
+            At GroceryStore, we are committed to providing our customers with the freshest and highest-quality produce, dairy, meats, and groceries every day. We source our products from trusted suppliers and local farmers to ensure top-notch quality.
+ We believe in building long-lasting relationships with our customers by offering personalized service and creating a shopping experience that meets your needs. Your satisfaction is our priority!
+Wide Product Selection: Whether you are looking for everyday essentials or unique gourmet items, we offer a wide range of products to suit your tastes and dietary preferences. From organic and gluten-free options to international flavors, we have something for everyone.
+ We are dedicated to supporting sustainable practices by reducing waste, offering eco-friendly products, and working with partners who share our commitment to the environment.
+Convenient Shopping Experience: With a clean, organized layout and friendly staff, shopping at  is alway GroceryStores easy and enjoyable. We also offer online shopping and delivery options for your convenience. We believe in offering competitive prices without compromising on quality. Our weekly specials and loyalty programs are designed to help you save while getting the best for your family.
+GroceryStoreis proud to be an active part of the local community. We regularly support local charities, events, and initiatives to give back and strengthen our connections with the neighborhoods we serve.
+
+        </p>
+        </div>
+        <div class="img">
+            <img src="https://img.freepik.com/free-photo/side-view-different-types-macaroni-jars-bowls-wooden-surface-black-surface_141793-11042.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" alt="">
+        </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-grid">
+            <blockquote>
+                 <img src="https://img.freepik.com/free-photo/people-lifestyle-coziness-concept-attractive-charming-young-female-wearing-warm-knitted-sweater-cold-winter-day-spending-time-home_343059-3265.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" alt="">
+                <p> "The freshest produce I’ve ever had!"</p>
+            </blockquote>
+            <blockquote>"Quick delivery and excellent service."
+                <img src="https://img.freepik.com/free-photo/beautiful-charming-young-caucasian-female-with-brown-eyes-messy-dark-hair_273609-9330.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" alt="">
+            </blockquote>
+            <blockquote><img src="https://img.freepik.com/premium-photo/portrait-young-brunette-girl-denim-jacket-park_96872-2829.jpg?uid=R173995795&ga=GA1.1.1365367340.1731489932&semt=ais_hybrid" alt="">
+               <p>"Great prices and amazing quality."</p> </blockquote>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog">
+        <h2>From Our Blog</h2>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <h3>5 Tips for Healthy Grocery Shopping</h3>
+                <p>Learn how to make smarter choices while shopping for groceries.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Top 10 Superfoods</h3>
+                <p>Discover the most nutritious foods to include in your diet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container container">
+            <div class="contact-img">
+                <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
+            </div>
+
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <input type="text" placeholder="Your Name" />
+                <input type="email" placeholder="E-Mail" />
+                <textarea cols="30" rows="6" placeholder="Type Your Message"></textarea>
+               <button class="btn-cart"> Submit</button>
+            </div>
+        </div>
+    </section>
+    <section class="blog">   
+        <div class="emoji">
+            <h1 id="changeContent">Give Me A Rating</h1>
+            <h2 id="changeEmoji">🤗</h2>
+        </div>
+        <div class="btns" id="button">
+            <button id="btn1" onclick="buttons1()" <i class="fa-regular fa-star"></i> </button>
+            <button id="btn2" onclick="buttons2()"<i class="fa-regular fa-star"></i></button>
+            <button id="btn3" onclick="buttons3()"<i class="fa-regular fa-star"></i></button>
+            <button id="btn4" onclick="buttons4()"<i class="fa-regular fa-star"></i></button>
+            <button id="btn5" onclick="buttons5()"<i class="fa-regular fa-star"></i></button>
+          | <button id="submitButton" onclick="submit()">Submit</button>
+        </div>
+        
+    </section>
+    
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 GroceryStore. All rights reserved.</p>
+    </footer>
+    <script> 
+         document.querySelector('.btn-shop').addEventListener('click', () => {
+        alert('Start shopping today!');
+});
+let dropButton=document.getElementById("dropDown")
+let listDropDown1=document.getElementById("dropDown")
+        let listItem=document.querySelector(".dropDown")
+        dropButton.onclick=function(){
+            listItem.style.display="block"
+        }
+        //listItem.onclick=function(){
+        //    listItem.style.display="none"
+       // }
+      // function showdrop1(){
+       // listDropDown1.style.display="block "  
+      // }
+        let cartCount = 0;
+    const cartCounter = document.getElementById('cartCounter');
+    const cartCountDisplay = document.getElementById('cartCount');
+    const increaseButton = document.getElementById('increaseButton');
+    const decreaseButton = document.getElementById('decreaseButton');
+    function updateCartCount() {
+      cartCounter.textContent = cartCount;  
+      cartCountDisplay.textContent = cartCount;  
+    }
+    // Increase button
+    increaseButton.addEventListener('click', function() {
+      cartCount++; 
+      updateCartCount();  
+    });
+    
+    //  Decrease button
+    decreaseButton.addEventListener('click', function() {
+      if (cartCount > 0) {  
+        cartCount--;  
+        updateCartCount();  
+      }
+    });
+    let contentText = document.getElementById("changeContent");
+        let emoji = document.getElementById("changeEmoji");
+        let clickBtn1 = document.getElementById("btn1");
+        let clickBtn2 = document.getElementById("btn2");
+        let clickBtn3 = document.getElementById("btn3");
+        let clickBtn4 = document.getElementById("btn4");
+        let clickBtn5 = document.getElementById("btn5");
+
+        function resetGold() {
+            clickBtn1.style.backgroundColor = "white";
+            clickBtn2.style.backgroundColor = "white";
+            clickBtn3.style.backgroundColor = "white";
+            clickBtn4.style.backgroundColor = "white";
+            clickBtn5.style.backgroundColor = "white";
+        }
+
+        function buttons1() {
+            resetGold();
+            contentText.textContent = "Poor Experience";
+            emoji.textContent = "😑";
+            clickBtn1.style.backgroundColor = "gold";
+        }
+
+        function buttons2() {
+            resetGold();
+            contentText.textContent = "Average Experience";
+            emoji.textContent = "😥";
+            clickBtn1.style.backgroundColor = "gold";
+            clickBtn2.style.backgroundColor = "gold";
+        }
+
+        function buttons3() {
+            resetGold();
+            contentText.textContent = "Good Experience";
+            emoji.textContent = "😊";
+            clickBtn1.style.backgroundColor = "gold";
+            clickBtn2.style.backgroundColor = "gold";
+            clickBtn3.style.backgroundColor = "gold";
+        }
+
+        function buttons4() {
+            resetGold();
+            contentText.textContent = "Better Experience";
+            emoji.textContent = "🥰";
+            clickBtn1.style.backgroundColor = "gold";
+            clickBtn2.style.backgroundColor = "gold";
+            clickBtn3.style.backgroundColor = "gold";
+            clickBtn4.style.backgroundColor = "gold";
+        }
+
+        function buttons5() {
+            resetGold();
+            contentText.textContent = "Excellent Experience";
+            emoji.textContent = "🤩";
+            clickBtn1.style.backgroundColor = "gold";
+            clickBtn2.style.backgroundColor = "gold";
+            clickBtn3.style.backgroundColor = "gold";
+            clickBtn4.style.backgroundColor = "gold";
+            clickBtn5.style.backgroundColor = "gold";
+        }
+
+        function submit() {
+            location.reload(); // Reloads the page
+        }
+
+    </script>
+</body>
+</html>
